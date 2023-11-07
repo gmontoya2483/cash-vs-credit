@@ -1,0 +1,23 @@
+@mixin initial-setup {
+  html, body { height: 100%; }
+
+  html {
+    /* font-size: 10px; */
+    /* 10px / 16px = 0.625 = 62.5%*/
+    /* Porcentage of the user's browser font-size setting */
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+  }
+}

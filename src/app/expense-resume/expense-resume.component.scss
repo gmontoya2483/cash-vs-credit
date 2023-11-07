@@ -1,0 +1,75 @@
+@import "../../styles/partials/colors";
+
+:host.section-resume {
+  padding: 9.6rem 0;
+}
+
+.grid--resume {
+  row-gap: 19.6rem;
+}
+
+
+.resume-img-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &::before {
+    width: 70%;
+    /*height: 60%;
+    */
+    padding-bottom: 70%;
+    background-color: lighten($primary, 50%);
+    z-index: -2;
+  }
+
+  &::after {
+    width: 60%;
+    padding-bottom: 60%;
+    background-color: lighten($primary, 47%);
+    z-index: -1;
+  }
+
+  .resume-img {
+    width: 55%;
+  }
+}
+
+
+
+
+.step-img-box {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+mat-list-item {
+  margin-left: -1.6rem;
+}
+
+.resume-value {
+  color: darken($primary, 10%);
+  font-weight: 600;
+}
+
+.badge-icon {
+  color: $accent;
+}
+
+

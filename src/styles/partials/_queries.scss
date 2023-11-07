@@ -1,0 +1,27 @@
+@mixin tiny-screens {
+  /*320px / 16px  = 20em*/
+  @media only screen and (max-width: 20em) {
+    @content;
+  }
+}
+
+@mixin small-screens {
+  /*320px / 16px  = 30em*/
+  @media only screen and (max-width: 30em) {
+    @content;
+  }
+}
+
+@mixin medium-screens {
+  /*688px / 16px  = 43em   - 680px*/
+  @media only screen and (max-width: 43em) {
+    @content;
+  }
+}
+
+@mixin large-screens {
+  /*960px / 16px  = 60em  */
+  @media only screen and (max-width: 60em) {
+    @content;
+  }
+}

@@ -1,0 +1,38 @@
+<div class="container">
+  <span class="subheading">Resumen</span>
+  <h2 *ngIf="isBestOptionCash" class="heading-secondary">
+    La mejor opción es hacer la compra en efectivo.
+  </h2>
+  <h2 *ngIf="!isBestOptionCash" class="heading-secondary">
+    La mejor opción es hacer la compra con tarjeta de crédito.
+  </h2>
+</div>
+
+<div class="container grid grid--2-cols grid--resume">
+
+  <div class="resume-img-box">
+    <img
+      src="assets/img/resume_primary.svg"
+      class="resume-img"
+      alt="Un hombre haciendo un pago online con tarjeta de crédito"
+    />
+  </div>
+
+  <div>
+    <mat-list role="list">
+      <mat-list-item role="listitem">
+        Precio en efectivo: <span class="resume-value">${{ resume.cashPrice | number: ".2-2" }}</span>
+        <mat-icon class="badge-icon" *ngIf="isBestOptionCash">star</mat-icon>
+      </mat-list-item>
+      <mat-list-item role="listitem">
+        Precio con tarjeta en {{ resume.installments.length | number: ".0-0" }} cuotas: <span class="resume-value">${{ resume.creditCardPrice |number: ".2-2" }}</span>
+        <mat-icon class="badge-icon" *ngIf="!isBestOptionCash">star</mat-icon>
+      </mat-list-item>
+      <mat-list-item role="listitem">Intereses ganados con una TNA del {{ resume.tna | number: ".2-2" }}%: <span class="resume-value">${{ resume.totalInterest |number: ".2-2" }}</span></mat-list-item>
+      <mat-list-item role="listitem">Precio total descontando los intereses: <span class="resume-value">${{ resume.totalPrice |number: ".2-2" }}</span>
+        <mat-icon class="badge-icon" *ngIf="!isBestOptionCash">star</mat-icon>
+      </mat-list-item>
+    </mat-list>
+  </div>
+</div>
+

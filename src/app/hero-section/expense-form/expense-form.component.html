@@ -1,0 +1,19 @@
+<form [formGroup]="expenseForm">
+  <mat-form-field>
+    <mat-label>Mejor precio Efectivo:</mat-label>
+    <input matInput type="number" step=".01" class="example-right-align"  min="0" formControlName="cashPrice">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label >Precio con tarjeta:</mat-label>
+    <input matInput type="number" step=".01" class="example-right-align" min="0" formControlName="creditCardPrice">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Cantidad de Cuotas:</mat-label>
+    <input  class="example-right-align" matInput type="number"  formControlName="installments" min="1" max="18">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>TNA(%):</mat-label>
+    <input  class="example-right-align" step=".01" matInput type="number"  formControlName="tna" min="0">
+  </mat-form-field>
+  <button mat-raised-button color="accent" class="expense-form-button" (click)="submit()" >Calcular</button>
+</form>

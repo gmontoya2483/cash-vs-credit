@@ -1,0 +1,35 @@
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+  font-weight: 700;
+  color: $gray;
+  letter-spacing: -0.5px;
+}
+
+.heading-primary {
+  font-size: 5.2rem !important;
+  line-height: 1.05 !important;
+  margin-bottom: 3.2rem !important;
+}
+
+.heading-secondary {
+  font-size: 4.4rem !important;
+  line-height: 1.2 !important;
+  margin-bottom: 9.6rem !important;
+}
+
+.heading-tertiary {
+  font-size: 3rem !important;
+  line-height: 1.2 !important;
+  margin-bottom: 3.2rem !important;
+}
+
+.subheading {
+  display: block !important;
+  font-size: 1.6rem !important;
+  font-weight: 500 !important;
+  color: $accent !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.75px !important;
+  margin-bottom: 1.6rem !important;
+}

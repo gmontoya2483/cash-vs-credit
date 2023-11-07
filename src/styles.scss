@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+@import "styles/partials/mixins";
+@import "styles/partials/queries";
+@import "styles/partials/colors";
+@import "styles/partials/containers";
+@import "styles/partials/heading";
+@import "styles/partials/helpers";
+
+
+@include initial-setup;
+
+
+
